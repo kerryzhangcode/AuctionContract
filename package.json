@@ -1,0 +1,20 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "hh compile",
+    "test": "hh test",
+    "deploy": "rm -rf ./ignition/deployments && npx hardhat ignition deploy ./ignition/modules/Auction.js --network localhost",
+    "interact": "hh run scripts/interact.js --network localhost",
+    "deploy:ganache": "rm -rf ./ignition/deployments && npx hardhat ignition deploy ./ignition/modules/Auction.js --network ganache",
+    "interact:ganache": "hh run scripts/interact.js --network ganache"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "ganache-time-traveler": "^1.0.16",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "web3": "^4.16.0"
+  }
+}
